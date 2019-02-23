@@ -93,15 +93,16 @@
     <h2 id="head">Welcome to GPA calculator</h2>
     <div id="box">
       <br><br>
-    <form enctype="multipart/form-data" action="gpa.php" method="post"<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
-        First Name: <input type="text" name="firstname" id="firstname" value="<?php echo $firstname;?>">
+     
+    <form enctype="multipart/form-data" action="gpa.php" method="post"<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+      First Name: <input type="text" name="firstname" id="firstname" value="<?php echo $firstname;?>">
       <span class="error">* <?php echo $nameErr;?></span>
       <br><br>
-      Last Name: <input type="text" name="lastname" id="lastname" value="<?php echo $lastname;?>">
+      Last Name:  <input type="text" name="lastname" id="lastname" value="<?php echo $lastname;?>">
       <span class="error">* <?php echo $lastnameErr;?></span>
       <br><br>
-      E-mail  :  <input type="text" name="email" id="email" value="<?php echo $email;?>">
-      <span class="error">* <?php echo $emailErr;?></span>
+      Email: <input type="email" name="email" id="email" value="<?php echo $email;?>">
+        <span class="error">* <?php echo $emailErr;?></span>      
       <br><br>
       University: <input type="text" name="university" id="university" value="<?php echo $university;?>">
       <span class="error">* <?php echo $universityErr;?></span>
@@ -112,20 +113,20 @@
       <input type="radio" name="year" <?php if (isset($year) && $year=="3") echo "checked";?> value="3">3 
       <input type="radio" name="year" <?php if (isset($year) && $year=="4") echo "checked";?> value="4">4
       <span class="error"> <?php echo $yearErr;?></span>
-      <br><br>
+      <br>
       <div class="form-group col-md-6 col-sm-12">
-                 <label for="upload-file">Upload file</label>
-                    <div class="custom-file">
-                        <input type="file" accept="text/csv" required="" class="custom-file-input" name="fileToUpload" id="filepath " data-toggle="tooltip" data-placement="bottom" title="*File name must not contain special character." onchange="$(this).next().after().text($(this).val().split('\\').slice(-1)[0])">
-                        <label class="custom-file-label" for="filepath" style="font-weight: normal">Choose File</label>
-                    </div>
-                    <small id="passwordHelpInline" class="text-muted">
-                        <span style="-webkit-text-fill-color: red">*.csv file only.</span>
-                    </small>
-                </div>
-        <br><br>
-                <input type="submit" value="SUBMIT">
-        
+          <div class="custom-file">
+            <input type="file" accept="text/csv" required="" class="custom-file-input" name="fileToUpload" id="filepath" 
+          data-toggle="tooltip" data-placement="bottom" title="*File name must not contain special character." 
+          onchange="$(this).next().after().text($(this).val().split('\\').slice(-1)[0])">
+            <label class="custom-file-label" for="filepath" style="font-weight: normal">Choose File</label>
+          </div>
+            <small id="passwordHelpInline" class="text-muted">
+              <span style="-webkit-text-fill-color: red">*.csv file only.</span>
+            </small>
+      </div>
+      <br>
+        <input type="submit" class="btn btn-light" value="submit">    
     </form>
   </div>
 

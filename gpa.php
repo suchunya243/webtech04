@@ -24,7 +24,7 @@
     </nav>
 
 
-    <div>
+    <div id = "profile">
         <center>
         <h1>
         Hello
@@ -36,14 +36,15 @@
                 $email = $_POST['email'];
                 $university = $_POST['university'];
                 $year = $_POST['year'];
-                echo "<h2>Name :&nbsp".$firstName."&nbsp&nbsp&nbsp".$lastname."</h2>";
-                echo "<h3>Year :&nbsp".$year."&nbsp&nbsp&nbsp&nbsp&nbsp&nbspUniversity : ".$university."</h3>";
+                echo "<h4>Name :&nbsp".$firstName."&nbsp&nbsp&nbsp".$lastname."</h4>";
+                echo "<h4>Year :&nbsp".$year."&nbsp&nbsp&nbsp&nbsp&nbsp&nbspUniversity : ".$university."</h4>";
                 echo "<h4>Email :&nbsp".$email."</h4>";
                 
             ?>
         </center>
         
     </div>
+    <center>
         <table class="table table-dark">
         <thead>
             <tr>
@@ -88,6 +89,7 @@
         ?>
            </tbody>
     </table>
+        </center>
     <?php 
       echo "<p>"."Total credit = ".$total_credit."&nbsp&nbsp&nbspG.P.A. = ".$gpa."</p>";
     ?>
